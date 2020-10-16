@@ -1,0 +1,10 @@
+<ion-item *ngFor="let barang of barang" [routerLink]="['../', barang.id]">
+  <ion-thumbnail slot="start">
+    <ion-img [src]="barang.foto"></ion-img>
+  </ion-thumbnail>
+  <ion-grid>
+    <ion-row>{{ barang.merek }} {{ barang.model }}</ion-row>
+    <ion-row>Harga : {{ barang.harga | currency: "Rp " }}</ion-row>
+    <ion-row>Tersedia : {{ barang.stock }}</ion-row>
+  </ion-grid>
+</ion-item>
